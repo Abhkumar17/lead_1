@@ -1,0 +1,15 @@
+.timeLineHistTime:after {
+    background: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) no-repeat;
+    background-color: var(--bg_bebfbf);
+    background-position: -97px -1575px;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    visibility: visible;
+    width: 30px;
+    z-index: 19;
+}

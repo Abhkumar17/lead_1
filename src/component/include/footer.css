@@ -1,0 +1,29 @@
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 3px !important;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+  .footericons{
+    text-align: right;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .annuicns{
+    padding: 5px 15px;
+    border-left: 1px solid lightgrey;
+  }
+  .fa {
+    border: none !important; 
+    font-size: 17px !important;
+    padding: 0px ;
+    color: #000 !important;
+}
+.col-lg-3.pl-0.mt-30 {
+  padding-top: 20px;
+}

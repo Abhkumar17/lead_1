@@ -1,0 +1,166 @@
+.vtl .event:nth-child(odd)::after {
+    background: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) no-repeat;
+    background-color: var(--bg_bebfbf);
+    background-position: -97px -1575px;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    visibility: visible;
+    width: 30px;
+    z-index: 0;
+    background-color: #a5a5a5;
+}
+.vtl .event:nth-child(even)::after {
+    background: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) no-repeat;
+    background-color: var(--bg_bebfbf);
+    background-position: -97px -1575px;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    visibility: visible;
+    width: 30px;
+    z-index: 0;
+    background-color: #a5a5a5;
+}
+.MailSent:after, .Sent.Email:after, .Emails:after, .emails_added:after {
+    background-color: #97c9b8 !important;
+    background-position: -225px -1543px !important;
+}
+.email-bounce:after {
+    background-color: #ff8a7c !important;
+    background-position: -161px -1542px !important;
+}
+.note-bounce:after {
+    background-color: #ff8a7c !important;
+    background-position: -161px -1542px !important;
+}
+.timeLineHistTime:after {
+    background-color: #a5a5a5 !important;
+    background-position: -256px -1542px !important;
+    
+}
+.svgIconsyes {
+    background-image: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg);
+    background-repeat: no-repeat;
+    background-position: -504px -52px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    top: 10px;
+    left: 8px;
+} 
+.mt_20 {
+    left: 15px;
+    top: 15px;
+}
+.showhideDetailpanelIcon:before {
+    background: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg)no-repeat -590px -29px;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    width: 9px;
+}
+.upload-icon {
+    background: url(https://img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) no-repeat -49px -565px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+.noDataImg {
+    background: url(//img.zohocdn.com/crm/CRMClient/images/ill_empty_dashboard_48a100b_.svg) no-repeat -204px -550px;
+    height: 98px!important;
+    width: 142px;
+}
+.dashboard-header {
+    display: flex;
+}
+.start h3 {
+    color: #313949;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+}
+.outlineplus {
+    background: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) 12px -657px no-repeat #edf6ff;
+    padding-left: 30px;
+}
+.ico-search:after {
+    background-position: 0 0;
+    height: 16px;
+    width: 16px;
+    right: 16px;
+    top: 10%!important;
+    left: 21px!important;
+    opacity: .6;
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(//img.zohocdn.com/crm/images/svgicons_162d5bc_.svg);
+    background-repeat: no-repeat;
+}
+.task_lookup::after {
+    background: url(https://img.zohocdn.com/crm/images/svgicons_162d5bc_.svg);
+    height: 17px;
+    width: 17px;
+    opacity: .6;
+    content: "";
+    background-repeat: repeat;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: absolute;
+    background-position: -88px -1186px !important;
+    top: 15px;
+    right: 17px;
+}
+.neweditIconSvg:before {
+    background: url(https://img.zohocdn.com/crm/images/svgicons_162d5bc_.svg);
+    height: 24px;
+    padding: 3px;
+    width: 19px;
+    opacity: .6;
+    content: "";
+    background-repeat: repeat;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: relative;
+    background-position: -140px -473px !important;
+    top: 8px;
+    right: -1px;
+} 
+.upload-iconAtc {
+    background: url(https://img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) ;
+    background-repeat: repeat;
+    background-position: -49px -565px !important;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: relative;
+    top: 6px;
+}
+.link-iconAtc {
+    background: url(https://img.zohocdn.com/crm/images/svgicons_162d5bc_.svg) ;
+    background-repeat: repeat;
+    background-position: -26px -564px !important;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: relative;
+    top: 6px;
+}
+.googledrive-iconAtc, .upload-iconAtc, .zohodocs-iconAtc {
+    width: 15px;
+}
