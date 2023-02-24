@@ -64,21 +64,21 @@ export default function Login_form() {
                 <div className="login-inner-form">
 
                   {(() => {
-                    if (step == 1) {
+                    if (step === 1) {
                       return <ul id="progressbar">
                         <li className='active' id="account"><strong>Account</strong></li>
                         <li id="personal"><strong>About you</strong></li>
                         <li id="payment"><strong>Company</strong></li>
                       </ul>
                     }
-                    if (step == 2) {
+                    if (step === 2) {
                       return <ul id="progressbar">
                         <li className='active' id="account"><strong>Account</strong></li>
                         <li className='active' id="personal"><strong>About you</strong></li>
                         <li id="payment"><strong>Company</strong></li>
                       </ul>
                     }
-                    if (step == 3) {
+                    if (step === 3) {
                       return <ul id="progressbar">
                         <li className='active' id="account"><strong>Account</strong></li>
                         <li className='active' id="personal"><strong>About you</strong></li>

@@ -1,61 +1,81 @@
-// import React, { useState } from 'react';
-// import {
-//   MDBBtn,
-//   MDBModal,
-//   MDBModalDialog,
-//   MDBModalContent,
-//   MDBModalHeader,
-//   MDBModalTitle,
-//   MDBModalBody,
-//   MDBModalFooter,
-// } from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from "react";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
-// export default function App() {
-//   const [topRightModal, setTopRightModal] = useState(false);
+import axios from "axios";
 
-//   const toggleShow = () => setTopRightModal(!topRightModal);
+import Header from "../include/header";
+import Footer from "../include/footer";
 
-//   return (
-//     <>
-//       <MDBBtn onClick={toggleShow}>Top right</MDBBtn>
 
-//       <MDBModal
-//         animationDirection='right'
-//         show={topRightModal}
-//         tabIndex='-1'
-//         setShow={setTopRightModal}
-//       >
-//         <MDBModalDialog position='top-right' side>
-//           <MDBModalContent>
-//             <MDBModalHeader className='bg-info text-white'>
-//               <MDBModalTitle>Product in the cart</MDBModalTitle>
-//               <MDBBtn
-//                 color='none'
-//                 className='btn-close btn-close-white'
-//                 onClick={toggleShow}
-//               ></MDBBtn>
-//             </MDBModalHeader>
-//             <MDBModalBody>
-//               <div className='row'>
-//                 <div className='col-3 text-center'>
-//                   <i className='fas fa-shopping-cart fa-4x text-info'></i>
-//                 </div>
+const token = '3|okYVY8gK4Cw7DOp0XRaftVVTUNkHlBQ72QviwApL';
+const rows = [];
 
-//                 <div className='col-9'>
-//                   <p>Do you need more time to make a purchase decision?</p>
-//                   <p>No pressure, your product will be waiting for you in the cart.</p>
-//                 </div>
-//               </div>
-//             </MDBModalBody>
-//             <MDBModalFooter>
-//               <MDBBtn color='info'>Go to the cart</MDBBtn>
-//               <MDBBtn outline color='info' onClick={toggleShow}>
-//                 Close
-//               </MDBBtn>
-//             </MDBModalFooter>
-//           </MDBModalContent>
-//         </MDBModalDialog>
-//       </MDBModal>
-//     </>
-//   );
-// }
+export default function Deals() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://192.168.1.157/lms_laravel/api/showDealList', {
+  headers: {
+    'Authorization': `Bearer ${token}`
+  }
+})
+.then(response => {
+    setData(response.data.deals)
+  })
+  .catch(error => {
+    console.log(error);
+  });
+  }, []);
+
+  return (
+    <div>
+        <Header />
+        <TableContainer component={Paper}>
+        <Table aria-label="simple table" stickyHeader>
+        <TableHead>
+          <TableRow>
+            <TableCell>Deal Owner</TableCell>
+            <TableCell align="right">Deal Name</TableCell>
+            <TableCell align="right">Account Name</TableCell>
+            <TableCell align="right">Type</TableCell>
+            <TableCell align="right">Amount</TableCell>
+            <TableCell align="right">Closing Date</TableCell>
+            <TableCell align="right">stage</TableCell>
+            <TableCell align="right">Probability %</TableCell>
+            <TableCell align="right">Expected Revenue</TableCell>
+            <TableCell align="right">Campaign Source</TableCell>
+            <TableCell align="right">Description</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((row) => (
+            <TableRow key={row.id}>
+              <TableCell component="th" scope="row">
+                {row.dealOwner}
+              </TableCell>
+              <TableCell align="right">{row.dealName}</TableCell>
+              <TableCell align="right">{row.accountName}</TableCell>
+              <TableCell align="right">{row.type}</TableCell>
+              <TableCell align="right">{row.amount}</TableCell>
+              <TableCell align="right">{row.closingDate}</TableCell>
+              <TableCell align="right">{row.stage}</TableCell>
+              <TableCell align="right">{row.probability}</TableCell>
+              <TableCell align="right">{row.expectedRevenue}</TableCell>
+              <TableCell align="right">{row.campaignSource}</TableCell>
+              <TableCell align="right">{row.description}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+        <Footer />
+    </div>
+   
+  );
+}

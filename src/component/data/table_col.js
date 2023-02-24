@@ -1,7 +1,8 @@
-const col = ['lead Name',
+const col = [
+    'lead Name',
     'company',
     'Email',
-   'Phone',
+    'Phone',
     'Lead Source',
     'Lead Owner',
     'first Name',
@@ -10,6 +11,7 @@ const col = ['lead Name',
     'Fax Mobile',
     'website',
     'lead status',
-    'Industry'];
+    'Industry'
+];
 
 export default col;

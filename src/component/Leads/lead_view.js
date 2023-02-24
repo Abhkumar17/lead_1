@@ -18,7 +18,7 @@ export default function Lead_view() {
    
   let filter_section='col-sm-3';
   let lead_table='col-sm-9';  
-  if(filteroption=='OFF'){
+  if(filteroption ==='OFF'){
     filter_section='col-sm-1 hide';
     lead_table='col-sm-12'; 
     }else{
@@ -79,7 +79,7 @@ export default function Lead_view() {
                     </div>
                 </div>
             </div>
-             
+           <Footer />  
         </div>
     )
 

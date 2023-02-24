@@ -10,7 +10,7 @@ import { randomCreatedDate, randomTraderName, randomUpdatedDate, } from '@mui/x-
 
 // table row ---///
 const columns = [
-  { field: 'Lead Name', headerName: 'Lead Name', width: 180, editable: true },
+  { field: 'LeadName', headerName: 'Lead Name', width: 180, editable: true },
   { field: 'Lead Owner',headerName: 'Lead Owner', type: 'Owner', editable: true },
   { field: 'Company', headerName: 'Company', type: 'Company', width: 180, editable: true, },
   { field: 'First Name', headerName: 'FirstName', type: 'FirstName', width: 220, editable: true, },

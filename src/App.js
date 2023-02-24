@@ -13,7 +13,6 @@ import Activities from './component/page/Activities';
 //lead section import 
 import Dashbord from './component/Leads/Lead_dashboard';
 import Lead from './component/Leads/lead';
-import Create_Lead from './component/Leads/create';
 import Lead_import from './component/Leads/import_lead';
 import Lead_overview from './component/Leads/lead_overview';
 import Login_form from './component/page/login';
@@ -35,7 +34,6 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/dashboard' element={<Dashbord />} />
           <Route path='/Leads' element={<Lead />} />
-          <Route path='/Leads/create' element={<Create_Lead />} />
           <Route path='/Leads/import_lead' element={<Lead_import />} />
           <Route path='/Leads/lead_overview' element={<Lead_overview />} />
           <Route path='/Deals' element={<Deals />} />
@@ -44,7 +42,7 @@ function App() {
           <Route path='/Contacts' element={<Contacts />} />
           <Route path='/Report' element={<Report />} />
           <Route path='/Campaign' element={<Campaign />} />
-          
+
         </Routes>
       </Router>
     </div>

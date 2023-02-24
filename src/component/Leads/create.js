@@ -18,18 +18,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Create_Lead() {
   const classes = useStyles();
-  const [leadName, setLeadName] = useState("");
+  const [lead_Name, setlead_Name] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
-  const [leadSource, setLeadSource] = useState("");
-  const [leadOwner, setLeadOwner] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
+  const [lead_Source, setlead_Source] = useState("");
+  const [first_Name, setfirst_Name] = useState("");
+  const [last_Name, setlast_Name] = useState("");
+  const [titel, setTitle] = useState("");
   const [fax, setFax] = useState("");
   const [mobile, setMobile] = useState("");
   const [website, setWebsite] = useState("");
-  const [leadStatus, setLeadStatus] = useState("");
+  const [lead_status, setLeadStatus] = useState("");
   const [industry, setIndustry] = useState("");
   const [tr, setTr] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -38,31 +37,30 @@ export default function Create_Lead() {
     event.preventDefault();
     setIsLoading(true);
 
-    const authToken = localStorage.getItem("token");
+    const token = ("38|iZ0yPZnlxF1VgYX0inl9PylMwZx9ymfGNtyqqlkx");
     // console.log(authToken);
     axios
       .post(
-        "http://127.0.0.1:8000/api/CreateUserLead",
+        "http://192.168.1.157/lms_laravel/api/CreateUserLead",
         {
-          leadName,
+          lead_Name,
           company,
           email,
-          leadSource,
-          leadOwner,
-          firstName,
-          lastName,
-          title,
+          lead_Source,
+          first_Name,
+          last_Name,
+          titel,
           fax,
           mobile,
           website,
-          leadStatus,
+          lead_status,
           industry,
           tr,
         },
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${authToken}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       )
@@ -87,12 +85,7 @@ export default function Create_Lead() {
                             <div className="card d-flex ">
                                 <div className="card-body text-center d-flex justify-content-between align-items-center">
                                     <div className="admin_details d-flex justify-content-between align-items-baseline">
-                                        <h3>Edit Lead</h3>
-                                        <h6><Link to="#">Edit Page Layout</Link></h6>
-                                    </div>
-                                    <div className="nav_btn edit-lead">
-                                        <Link to="#" target="_blank"><button type="button" className="btn btn-primary btn-nav">Cancel</button></Link>
-                                        <Link to="#" target="_blank"><button type="button" className="btn btn-primary">Save</button></Link>
+                                        <h3>Cread Lead</h3>
                                     </div>
                                 </div>
                             </div>
@@ -109,8 +102,8 @@ export default function Create_Lead() {
                                     <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit}>
                                         <TextField
                                             label="Lead Name"
-                                            value={leadName}
-                                            onChange={(event) => setLeadName(event.target.value)}
+                                            value={lead_Name}
+                                            onChange={(event) => setlead_Name(event.target.value)}
                                         />
                                         <TextField
                                             label="Company"
@@ -125,27 +118,23 @@ export default function Create_Lead() {
                                         />
                                         <TextField
                                             label="Lead Source"
-                                            value={leadSource}
-                                            onChange={(event) => setLeadSource(event.target.value)}
+                                            value={lead_Source}
+                                            onChange={(event) => setlead_Source(event.target.value)}
                                         />
-                                                <TextField
-                                            label="Lead Owner"
-                                            value={leadOwner}
-                                            onChange={(event) => setLeadOwner(event.target.value)}
-                                        />
+                                                
                                         <TextField
                                             label="First Name"
-                                            value={firstName}
-                                            onChange={(event) => setFirstName(event.target.value)}
+                                            value={first_Name}
+                                            onChange={(event) => setfirst_Name(event.target.value)}
                                         />
                                         <TextField
                                             label="Last Name"
-                                            value={lastName}
-                                            onChange={(event) => setLastName(event.target.value)}
+                                            value={last_Name}
+                                            onChange={(event) => setlast_Name(event.target.value)}
                                         />
                                         <TextField
                                             label="Title"
-                                            value={title}
+                                            value={titel}
                                             onChange={(event) => setTitle(event.target.value)}
                                         />
                                         <TextField
@@ -165,7 +154,7 @@ export default function Create_Lead() {
                                         />
                                         <TextField
                                             label="Lead Status"
-                                            value={leadStatus}
+                                            value={lead_status}
                                             onChange={(event) => setLeadStatus(event.target.value)}
                                         />
                                         <TextField
